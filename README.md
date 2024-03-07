@@ -1,27 +1,34 @@
-# ApprovalFlowApplication
+#  Aplicação de fluxo de aprovação para compra de material de escritório - Approval Flow Application WEB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+Este é um projeto Angular 17.
 
-## Development index
+## Pré-requisitos
 
-Run `ng serve` for a dev index. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, certifique-se de ter o Node.js e o Angular CLI instalados em sua máquina.
 
-## Code scaffolding
+- Node.js: https://nodejs.org/
+- Angular CLI: `npm install -g @angular/cli`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
 
-## Build
+1. Clone o repositório: `git clone [https://github.com/alinebarbosasilva/approval-flow-application-web.git]`
+2. Navegue até o diretório do projeto: `cd approval-flow-application-web`
+3. Instale as dependências: `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Desenvolvimento
 
-## Running unit tests
+Para iniciar o servidor de desenvolvimento:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng serve
 
-## Running end-to-end tests
+ng build --prod
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Agora você pode abrir o seu navegador e visitar http://localhost:4200.
 
-## Further help
+Build
+Para criar uma build de produção, execute o seguinte comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ng build --prod
+
+Os arquivos de build serão armazenados no diretório dist/.
