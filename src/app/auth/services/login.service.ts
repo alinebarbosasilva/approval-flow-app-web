@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Observable, take, tap } from "rxjs";
+import { Observable, take } from "rxjs";
 import { Credentials } from "../models/credentials";
 import { Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
@@ -17,7 +17,7 @@ export class LoginService {
   urlApi = 'http://localhost:3000';
 
 
-  login(credentials: Credentials){
+  login(credentials: Credentials) {
     return this.http.post(`${this.urlApi}/login`, credentials).pipe(take(1))
   }
 

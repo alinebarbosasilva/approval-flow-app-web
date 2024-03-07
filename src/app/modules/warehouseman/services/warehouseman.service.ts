@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { environment } from "../../../../environments/environment";
 import { Solicitation } from "../../solicitations/model/solicitation";
 
@@ -17,7 +17,7 @@ export class WarehousemanService {
     return this.httpClient.get<Solicitation[]>(this.API, {params});
   }
 
-  single(id: number){
+  single(id: number) {
     return this.httpClient.get(`${this.API}/${id}`)
   }
 

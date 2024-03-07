@@ -15,7 +15,6 @@ import { MatCard, MatCardHeader, MatCardModule } from "@angular/material/card";
 import { Observable } from "rxjs";
 import { AsyncPipe } from "@angular/common";
 import { MatButton, MatIconButton } from "@angular/material/button";
-import { WarehousemanService } from "../warehouseman/services/warehouseman.service";
 import { Solicitation } from "../solicitations/model/solicitation";
 import { MatFormField, MatLabel } from "@angular/material/form-field";
 import { MatOption } from "@angular/material/autocomplete";
@@ -66,7 +65,7 @@ export class AdminsComponent {
     description: [null],
   })
 
-  filter(){
+  filter() {
     this.solicitations = this.adminsService.list(this.formFilters.getRawValue());
   }
 }
