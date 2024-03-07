@@ -12,7 +12,7 @@ Antes de começar, certifique-se de ter o Node.js e o Angular CLI instalados em 
 ## Instalação
 
 1. Clone o repositório: `git clone [https://github.com/alinebarbosasilva/approval-flow-application-web.git]`
-2. Navegue até o diretório do projeto: `cd approval-flow-application-web-\approval-flow-application`
+2. Navegue até o diretório do projeto: `cd approval-flow-application-web/approval-flow-application`
 3. Instale as dependências: `npm install`
 
 ## Desenvolvimento
