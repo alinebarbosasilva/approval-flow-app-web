@@ -1,11 +1,24 @@
 #  Aplicação de fluxo de aprovação para compra de material de escritório - Approval Flow Application WEB
+Descrição
+Este projeto é uma aplicação web desenvolvida utilizando Angular, TypeScript, RxJS, ngx-mask, SCSS e Angular Material, que implementa um sistema de fluxo de aprovação para compras de material de escritório. A aplicação permite aos usuários criar solicitações de compra especificando os itens necessários. Além disso, os usuários com permissões de aprovação podem visualizar e aprovar/rejeitar as solicitações de compra pendentes.
+
+O uso de TypeScript oferece tipagem estática para um desenvolvimento mais seguro e robusto, enquanto o RxJS é utilizado para programação reativa, facilitando o gerenciamento de fluxos de dados assíncronos. O ngx-mask é utilizado para máscaras de entrada, garantindo que os dados inseridos pelos usuários sigam um formato específico.
+
+O Angular Material é utilizado para fornecer uma ampla variedade de componentes de interface do usuário predefinidos e estilizados, garantindo uma experiência de usuário consistente e responsiva.
+
+O SCSS é utilizado para estilização personalizada, oferecendo maior flexibilidade no design da interface do usuário e permitindo a criação de estilos mais complexos e reutilizáveis.
 
 https://alinebarbosasilva.github.io/approval-flow-application-web/login/
 
 ![image](https://github.com/alinebarbosasilva/approval-flow-application-web/assets/80774707/38a9ea8b-57ae-45af-a62f-70ff9442c6b7)
 
 
-Este é um projeto Angular 17.0.6 
+- No projeto contém uma tela de login que pode ser acessada através de 3 tipos de usários com visões e permissões diferentes:
+  - SOLICITANTE -- solicitante@senior.com.br utilizando a senha Senior@123
+  - ALMOXARIFE --  almoxarife@senior.com.br  utilizando senha Senior@123
+  - ADMININSTRATIVO -- administrativo@senior.com.br  utilizando senha Senior@123
+
+Este é um projeto atualizado com a versão mais recente do framework Angular - 17.0.6 
 
 ## Pré-requisitos
 
