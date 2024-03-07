@@ -1,0 +1,22 @@
+@import "./variables";
+
+@mixin breakpoint($name) {
+  @if $name ==  "small" {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }
+  @else if $name ==  "medium" {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $name ==  "large"{
+    @media (max-width: $desktop) {
+      @content;
+    }
+  } @else if $name == "bigger"{
+    @media (min-width: $monitor) {
+      @content;
+    }
+  }
+}

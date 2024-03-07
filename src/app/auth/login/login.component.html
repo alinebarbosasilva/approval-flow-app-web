@@ -1,0 +1,49 @@
+<mat-card class="login__mat__card">
+  <mat-card-content class="login__card__content">
+
+    <mat-card-title class="login__title">Faça o login</mat-card-title>
+    <form
+      autocomplete="off"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="login__form">
+
+      <mat-form-field class="login__fields">
+        <input
+          matInput
+          placeholder="E-mail"
+          type="email"
+          formControlName="username"
+        />
+        @if (form.controls['username'].invalid && form.controls['username'].touched) {
+          <mat-hint class="login__error__message">
+            Esse campo é obrigatório, preencha corretamente.
+          </mat-hint>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="login__fields">
+        <input
+          matInput
+          placeholder="Senha"
+          type="password"
+          formControlName="password"
+        />
+        @if (form.controls['password'].invalid && form.controls['password'].touched) {
+          <mat-hint class="login__error__message">
+            Esse campo é obrigatório, preencha corretamente.
+          </mat-hint>
+        }
+      </mat-form-field>
+
+      <button
+        class="login__button"
+        color="primary" mat-raised-button type="submit"
+        [disabled]="!form.valid">
+        Acessar
+      </button>
+
+    </form>
+
+  </mat-card-content>
+</mat-card>

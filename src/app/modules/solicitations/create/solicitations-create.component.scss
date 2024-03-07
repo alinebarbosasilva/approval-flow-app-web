@@ -1,0 +1,36 @@
+.create__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background: #FFF0F5;
+
+
+  &__container__submit__button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__submit__button {
+    width: 20%
+  }
+
+  &__mat__card__content{
+    background: #FFF0F5;
+    padding: 2rem;
+  }
+
+
+  &__back__button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+.action-column {
+  flex: 0 0 125px;
+}

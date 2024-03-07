@@ -1,0 +1,23 @@
+.mat-table {
+  overflow: auto;
+  max-height: 600px;
+}
+
+.action-column {
+  flex: 0 0 125px;
+}
+
+.mat-card-actions{
+  justify-content: center;
+}
+
+td {
+  width: 400px;
+}
+
+.solicitation-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <span>Solicitações</span>
+</mat-toolbar>
+<mat-card>
+  <mat-card-content>
+    <div class="solicitation-button">
+      <button
+        mat-raised-button
+        color="primary"
+        aria-label="Solicitar um produto"
+        (click)="onAdd()"
+        class="action-column-header"
+      >
+        <span>Solicitar um produto</span>
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+    @if ((solicitations | async)?.length) {
+      <mat-table [dataSource]="solicitations" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Código</th>
+          <td mat-cell *matCellDef="let item"> {{ item.id }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nome</th>
+          <td mat-cell *matCellDef="let item"> {{ item.name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Descrição</th>
+          <td mat-cell *matCellDef="let item"> {{ item.description }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </mat-table>
+
+    } @else {
+      <h2 class="not-found">Nenhuma informação encontrada.</h2>
+    }
+  </mat-card-content>
+</mat-card>
+

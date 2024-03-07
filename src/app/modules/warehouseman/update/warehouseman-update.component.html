@@ -1,0 +1,84 @@
+<mat-toolbar color="primary">
+  <span>Moderar solicitação</span>
+</mat-toolbar>
+<mat-card>
+  <mat-card-content
+    class="create__form__mat__card__content"
+  >
+    <div class="create__form__back__button">
+      <button
+        mat-raised-button
+        color="primary"
+        aria-label="Solicitar um produto"
+        (click)="back()"
+        class="action-column-header"
+      >
+        <span>Voltar</span>
+        <mat-icon>arrow_left</mat-icon>
+      </button>
+    </div>
+
+    <form
+      class="create__form"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <mat-form-field>
+        <input matInput
+               placeholder="Nome do Solicitante"
+               id="nomeSolicitante"
+               formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea
+          matInput
+          placeholder="Adicione a descrição do item"
+          id="descricaoItem"
+          rows="3"
+          type="text"
+          formControlName="description">
+
+        </textarea>
+      </mat-form-field>
+
+      <mat-form-field
+        appearance="fill">
+        Preço do produto
+        <input
+          type="text"
+          prefix="R$ "
+          mask="00,00"
+          formControlName="price"
+          matInput [dropSpecialCharacters]="false"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Escolha uma ação</mat-label>
+        <mat-select formControlName="action">
+          <mat-option [value]="1">Aprovar</mat-option>
+          <mat-option [value]="2">Reprovar</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea
+          matInput
+          placeholder="Adicione a observação"
+          rows="3"
+          type="text"
+          formControlName="observation">
+        </textarea>
+      </mat-form-field>
+
+      <div class="create__form__container__submit__button">
+        <button mat-raised-button
+                [disabled]="form.invalid"
+                class="create__form__submit__button"
+                type="submit">Executar ação
+        </button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
