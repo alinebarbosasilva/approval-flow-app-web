@@ -2,6 +2,9 @@
 
 https://alinebarbosasilva.github.io/approval-flow-application-web/login/
 
+![image](https://github.com/alinebarbosasilva/approval-flow-application-web/assets/80774707/38a9ea8b-57ae-45af-a62f-70ff9442c6b7)
+
+
 Este é um projeto Angular 17.0.6 
 
 ## Pré-requisitos
