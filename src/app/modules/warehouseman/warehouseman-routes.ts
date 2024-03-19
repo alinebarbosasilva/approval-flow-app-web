@@ -3,7 +3,7 @@ import { WarehousemanComponent } from "./warehouseman.component";
 import { WarehousemanUpdateComponent } from "./update/warehouseman-update.component";
 
 export default [
-  {path: '', component: WarehousemanComponent},
-  {path: ':id', component: WarehousemanUpdateComponent},
+  { path: '', component: WarehousemanComponent },
+  { path: ':id', component: WarehousemanUpdateComponent },
 ] satisfies Route[]
 

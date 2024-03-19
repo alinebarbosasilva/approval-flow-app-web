@@ -48,9 +48,12 @@
         <input
           type="text"
           prefix="R$ "
-          mask="00,00"
+          mask="separator.2"
+          thousandSeparator="."
+          decimalMarker=","
           formControlName="price"
-          matInput [dropSpecialCharacters]="false"/>
+          matInput
+          [dropSpecialCharacters]="false"/>
       </mat-form-field>
       <div class="create__form__container__submit__button">
         <button mat-raised-button

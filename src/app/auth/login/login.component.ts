@@ -21,6 +21,9 @@ export class LoginComponent {
   formBuilder = inject(FormBuilder)
   loginService = inject(LoginService)
   router = inject(Router)
+
+  isLoggedIn: boolean = false;
+
   form = this.formBuilder.nonNullable.group({
     username: ['', [Validators.email, Validators.required]],
     password: ['', [Validators.required, Validators.minLength(6)]]
@@ -39,6 +42,7 @@ export class LoginComponent {
     if (this.form.valid) {
       this.loginService.login(this.form.getRawValue()).subscribe((resp: any) => {
         localStorage.setItem('access_token', resp.token);
+        localStorage.setItem('user', JSON.stringify(resp.user))
         this.navigateToRoutes(resp.user);
       })
     }

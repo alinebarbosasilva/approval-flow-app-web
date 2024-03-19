@@ -1,5 +1,16 @@
 <mat-toolbar color="primary">
   <span>Almoxarife - Solicitações</span>
+
+  <button
+    mat-raised-button
+    color="primary"
+    aria-label="Sair"
+    (click)="logout()"
+    class="action-column-header"
+  >
+    <span>Sair</span>
+    <mat-icon>logout</mat-icon>
+  </button>
 </mat-toolbar>
 <mat-card>
   <mat-card-content>

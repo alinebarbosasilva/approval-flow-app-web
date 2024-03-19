@@ -22,6 +22,8 @@ import { MatSelect } from "@angular/material/select";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
 import { MatInput } from "@angular/material/input";
 import { AdminsService } from "./services/admins.service";
+import { LoginService } from "../../auth/services/login.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-admins',
@@ -55,8 +57,10 @@ import { AdminsService } from "./services/admins.service";
 })
 export class AdminsComponent {
   formBuilder = inject(FormBuilder)
-  displayedColumns = ['id', 'name', 'description'];
   adminsService = inject(AdminsService)
+  loginService = inject(LoginService)
+  router = inject(Router)
+  displayedColumns = ['id', 'name', 'description'];
   solicitations: Observable<Solicitation[]> = this.adminsService.list();
 
   formFilters = this.formBuilder.group({
@@ -67,5 +71,11 @@ export class AdminsComponent {
 
   filter() {
     this.solicitations = this.adminsService.list(this.formFilters.getRawValue());
+  }
+
+  logout(){
+    this.loginService.logout().subscribe(()=>{
+      this.router.navigate(['/login'])
+    })
   }
 }

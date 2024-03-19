@@ -1,3 +1,8 @@
+.mat-toolbar{
+  display: flex;
+  justify-content: space-between;
+}
+
 .mat-table {
   overflow: auto;
   max-height: 600px;
@@ -12,9 +17,13 @@
 }
 
 td {
-  width: 400px;
+  width: 630px;
+  padding: 1rem;
 }
 
+th {
+  padding: 1rem;
+}
 .solicitation-button {
   width: 100%;
   display: flex;
